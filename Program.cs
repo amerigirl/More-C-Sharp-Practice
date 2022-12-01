@@ -3,11 +3,23 @@ using More_C_Sharp_Practice.Math;
 
 namespace CSharpFundamentals
 {
+
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail = 2,
+        Express = 3
+
+    }
     class Program
     {
 
         static void Main(string[] args)
         {
+
+            //changing the console :)
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+
             //instantiating a new instance of person
 
             var john = new Person();
@@ -70,6 +82,23 @@ namespace CSharpFundamentals
                        don't forget to feed the dogs!";
             Console.WriteLine(text);
 
+
+            //calling an Enum
+            var newEnum = ShippingMethod.Express;
+         
+            //converting an enum to and from an int
+            Console.WriteLine((int)newEnum);
+            
+            var enumId = 3;
+            Console.WriteLine((ShippingMethod)enumId);
+
+            //converting an enum to a string
+            Console.WriteLine(newEnum); //or newEnum.ToString
+
+
+            //converting a string to an enum
+            var enumName = "Express";
+            var shippingMethod = (ShippingMethod) Enum.Parse(typeof (ShippingMethod), enumName);
         }
 
 
