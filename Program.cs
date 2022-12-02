@@ -16,7 +16,7 @@ namespace CSharpFundamentals
 
             //------------------------------------------- Basic Stuff -------------------------------------------
 
-            
+
             //instantiating a new instance of person
             var john = new Person();
             john.FirstName = "John ";
@@ -74,8 +74,8 @@ namespace CSharpFundamentals
             //verbatim strings
 
             var text = @"Hey babes!
-                       I'm off to the store
-                       don't forget to feed the dogs!";
+             I'm off to the store
+             don't forget to feed the dogs!";
             Console.WriteLine(text);
 
 
@@ -85,27 +85,43 @@ namespace CSharpFundamentals
 
             //calling an Enum
             var newEnum = ShippingMethod.Express;
-         
+
             //converting an enum to and from an int
-            Console.WriteLine((int)newEnum);
-            
+            Console.WriteLine("\n" + (int)newEnum);
+
             var enumId = 3;
             Console.WriteLine((ShippingMethod)enumId);
 
             //converting an enum to a string
-            Console.WriteLine(newEnum); //or newEnum.ToString
+            Console.WriteLine("\n" + newEnum); //or newEnum.ToString
 
 
             //converting a string to an enum
             var enumName = "Express";
-            var shippingMethod = (ShippingMethod) Enum.Parse(typeof (ShippingMethod), enumName);
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), enumName);
 
 
-            //------------------------------------------------- 
+            //------------------------------------------------- Reference and Value Types --------------------------------
+
+
+            //using string.Format
+            var firstInt = 10;
+            var secondInt = firstInt;
+            secondInt++;
+            Console.WriteLine(string.Format("\nfirstNumber: {0}, secondNumber: {1}", firstInt, secondInt));
+
+
+            //reference types using arrays
+            var array1 = new[] { 1, 2, 3 };
+
+            var array2 = array1;
+
+            array2[0] = 0;
+            Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
+
+
+
         }
-
-
-
 
         //enum shipping method
 
