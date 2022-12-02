@@ -3,14 +3,7 @@ using More_C_Sharp_Practice.Math;
 
 namespace CSharpFundamentals
 {
-
-    public enum ShippingMethod
-    {
-        RegularAirMail = 1,
-        RegisteredAirMail = 2,
-        Express = 3
-
-    }
+  
     class Program
     {
 
@@ -20,8 +13,11 @@ namespace CSharpFundamentals
             //changing the console :)
             Console.ForegroundColor = ConsoleColor.DarkYellow;
 
-            //instantiating a new instance of person
 
+            //------------------------------------------- Basic Stuff -------------------------------------------
+
+            
+            //instantiating a new instance of person
             var john = new Person();
             john.FirstName = "John ";
             john.LastName = "Smith";
@@ -83,6 +79,10 @@ namespace CSharpFundamentals
             Console.WriteLine(text);
 
 
+
+
+            //---------------------------------------------------------- Enum work ---------------------------------------------------------------
+
             //calling an Enum
             var newEnum = ShippingMethod.Express;
          
@@ -99,7 +99,26 @@ namespace CSharpFundamentals
             //converting a string to an enum
             var enumName = "Express";
             var shippingMethod = (ShippingMethod) Enum.Parse(typeof (ShippingMethod), enumName);
+
+
+            //------------------------------------------------- 
         }
+
+
+
+
+        //enum shipping method
+
+        public enum ShippingMethod
+        {
+            RegularAirMail = 1,
+            RegisteredAirMail = 2,
+            Express = 3
+
+        }
+
+
+
 
 
     }
