@@ -3,6 +3,7 @@ using More_C_Sharp_Practice.Math;
 
 namespace CSharpFundamentals
 {
+ 
   
     class Program
     {
@@ -119,8 +120,19 @@ namespace CSharpFundamentals
             array2[0] = 0;
             Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
 
+            //----------------------- Working with reference methods (increment and make old) -------------------------------
 
 
+            var anyNumber = 1;
+
+            Increment(anyNumber);
+            Console.WriteLine(anyNumber);
+            //anyNumber is 1 despite line 129--because it is referencing the same place--not two separate places
+
+
+            var anotherPerson = new AnotherPerson() {Age =  20};
+            MakeOld(anotherPerson);
+            Console.WriteLine(anotherPerson.Age);
         }
 
         //enum shipping method
@@ -134,8 +146,21 @@ namespace CSharpFundamentals
         }
 
 
+        //reference type method work
 
+        public class AnotherPerson
+        {
+            public int Age;
+        }
 
+        public static void Increment(int anyNumber)
+        {
+            anyNumber += 10;
+        }
 
+        public static void MakeOld(AnotherPerson anotherPerson)
+        {
+            anotherPerson.Age += 10;
+        }
     }
 }
