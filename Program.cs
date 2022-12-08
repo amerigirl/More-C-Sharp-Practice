@@ -10,9 +10,8 @@ namespace CSharpFundamentals
 
         static void Main(string[] args)
         {
-
-            //changing the console :)
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+			//changing the console :)
+			Console.ForegroundColor = ConsoleColor.DarkYellow;
 
 
             //------------------------------------------- Basic Stuff -------------------------------------------
@@ -133,11 +132,66 @@ namespace CSharpFundamentals
             var anotherPerson = new AnotherPerson() {Age =  20};
             MakeOld(anotherPerson);
             Console.WriteLine(anotherPerson.Age);
-        }
 
-        //enum shipping method
 
-        public enum ShippingMethod
+
+            //--------------------------------------- conditional practice -----------------------------------------------
+
+
+
+            int hour = 10;
+
+            if (hour > 0 && hour < 12)
+            {
+	            System.Console.WriteLine("It's morning.");
+            } else if (hour >= 12 && hour < 18)
+            {
+	            System.Console.WriteLine("it's afternoon.");
+            }
+            else
+            {
+	            System.Console.WriteLine("it's evening.");
+            }
+
+           
+            bool isGoldCustomer = false;
+            
+            
+    //        //general condtional
+	        //float price;
+    //        if (isGoldCustomer)
+    //        {
+				//price = 19.95f;
+    //        }
+    //        else
+    //        {
+	   //         price = 29.95f;
+    //        }
+
+            //quick conditional--learn this!
+
+            float price = (isGoldCustomer) ? 19.95f : 29.95f;
+            System.Console.WriteLine(price);
+	           
+            
+            Console.Read();
+
+		}
+
+
+
+
+
+
+
+		//---------------------------------- not part of main: methods etc. ----------------------------------------------
+
+
+
+
+		//enum shipping method
+
+		public enum ShippingMethod
         {
             RegularAirMail = 1,
             RegisteredAirMail = 2,
@@ -162,5 +216,7 @@ namespace CSharpFundamentals
         {
             anotherPerson.Age += 10;
         }
+
+
     }
 }
