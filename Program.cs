@@ -184,12 +184,21 @@ namespace CSharpFundamentals
 
 
 
-		//---------------------------------- not part of main: methods etc. ----------------------------------------------
+		//---------------------------------- not part of main: methods , classes outside main, etc. ----------------------------------------------
 
 
+        //working with switchcases
 
 
-		//enum shipping method
+        public enum Season
+        {
+            Spring,
+            Summer,
+            Fall,
+            Witner
+        }
+
+        //enum shipping method
 
 		public enum ShippingMethod
         {
