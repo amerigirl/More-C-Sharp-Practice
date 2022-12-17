@@ -13,4 +13,14 @@ namespace More_C_Sharp_Practice.Math
             return a + b;
         }
     }
+
+
+
+	public enum Seasons
+	{
+		Spring,
+		Summer,
+		Fall,
+		Winter
+	}
 }
